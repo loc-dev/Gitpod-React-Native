@@ -1,22 +1,25 @@
-import React, {Component} from 'react';
-import { StyleSheet, View } from 'react-native';
-import BoasVindas from './components/BoasVindas.js';
+import React from 'react';
+import {Text, View, StyleSheet} from "react-native";
 
-export default class App extends Component{
-  render(){
-    return(
-      <View style = {styles.container}>
-        <BoasVindas saudacao="Bom dia!"></BoasVindas>
-      </View>
-    );
-  }
-}
+import PrimeiroComponente from "./components/primeiro";
+import CompPadrao, {Comp1, Comp2} from "./components/multi";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+import estilo from "./components/estilo";
+
+export default () => (
+  <View style={style.App}>
+    <Text style={estilo.Tamanho_Fonte}>{1 + 1}</Text>
+    <CompPadrao/>
+    <Comp1/>
+    <Comp2/>
+    <PrimeiroComponente/>
+  </View>
+)
+
+const style = StyleSheet.create({
+  App: {
+    flexGrow: 1,
     justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#f4e8c1",
-  },
-});
+    alignItems: "center"
+  }
+})
