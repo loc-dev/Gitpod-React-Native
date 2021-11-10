@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, View, StyleSheet} from "react-native";
 
+import MinMax from "./components/minmax";  
 import PrimeiroComponente from "./components/primeiro";
 import CompPadrao, {Comp1, Comp2} from "./components/multi";
 
@@ -8,6 +9,7 @@ import estilo from "./components/estilo";
 
 export default () => (
   <View style={style.App}>
+    <MinMax/>
     <Text style={estilo.Tamanho_Fonte}>{1 + 1}</Text>
     <CompPadrao/>
     <Comp1/>
